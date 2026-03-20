@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #080c10;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: #06b6d4; color: #000; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #080c10; }
+  ::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 2px; }
+}
+
+@layer components {
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    color: #06b6d4;
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    color: #f1f5f9;
+    line-height: 1.05;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -0.03em;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    padding: 0.75rem 1.5rem; border-radius: 0.5rem;
+    transition: all 0.2s; background: #06b6d4; color: #000;
+    font-size: 0.9rem;
+  }
+  .btn-primary:hover { background: #0891b2; box-shadow: 0 0 30px rgba(6,182,212,.30); transform: translateY(-1px); }
+  .btn-primary:active { transform: scale(0.97); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    padding: 0.75rem 1.5rem; border-radius: 0.5rem;
+    transition: all 0.2s; color: #e2e8f0;
+    border: 1px solid rgba(255,255,255,0.12); font-size: 0.9rem;
+  }
+  .btn-outline:hover { border-color: #06b6d4; color: #06b6d4; transform: translateY(-1px); }
+  .btn-outline:active { transform: scale(0.97); }
+  .tech-badge {
+    font-size: 0.72rem; font-weight: 500;
+    padding: 0.2rem 0.65rem; border-radius: 4px;
+    color: #67e8f9; font-family: 'JetBrains Mono', monospace;
+    background: rgba(6,182,212,0.08);
+    border: 1px solid rgba(6,182,212,0.20);
+  }
+  .card-dark {
+    background: rgba(15,20,28,0.80);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 0.75rem;
+  }
+  .input-field {
+    width: 100%; border-radius: 0.5rem;
+    padding: 0.75rem 1rem; color: #e2e8f0;
+    outline: none; transition: border-color 0.2s;
+    font-family: 'Inter', sans-serif;
+    background: rgba(15,20,28,0.80);
+    border: 1px solid rgba(255,255,255,0.08);
+    color-scheme: dark;
+  }
+  .input-field:focus { border-color: #06b6d4; }
+  .input-field::placeholder { color: rgba(255,255,255,0.22); }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Inter', sans-serif; }
+  .font-mono    { font-family: 'JetBrains Mono', monospace; }
+  .gradient-text {
+    background: linear-gradient(135deg, #06b6d4, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes fillBar {
+  from { width: 0; }
+  to   { width: var(--pct); }
+}
+
+.animate-fade-up { animation: fadeUp .5s ease forwards; }
+.delay-100 { animation-delay: .1s; opacity: 0; }
+.delay-200 { animation-delay: .2s; opacity: 0; }
+.delay-300 { animation-delay: .3s; opacity: 0; }
+.delay-400 { animation-delay: .4s; opacity: 0; }
+.delay-500 { animation-delay: .5s; opacity: 0; }
+
+.shimmer-text {
+  background: linear-gradient(90deg,#06b6d4,#818cf8,#c084fc,#06b6d4);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(6,182,212,.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg,#06b6d4,#818cf8);
+  width: var(--pct);
+  animation: fillBar 1.3s cubic-bezier(.4,0,.2,1) forwards;
+}
