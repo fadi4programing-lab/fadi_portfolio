@@ -80,7 +80,7 @@ export default function Home() {
                 // tech_stack
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Django','REST APIs','PostgreSQL','Docker','Git','React.js'].map(b => (
+                {['Django','REST APIs','PostgreSQL','Docker','Git','React.js','Next.js'].map(b => (
                   <span key={b} className="tech-badge">{b}</span>
                 ))}
               </div>

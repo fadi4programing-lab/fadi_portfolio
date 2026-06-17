@@ -31,14 +31,16 @@ export const SKILLS = [
   { name: 'PostgreSQL',    percentage: 70, category: 'database' },
   { name: 'React.js',      percentage: 70, category: 'frontend' },
   { name: 'Tailwind CSS',  percentage: 68, category: 'frontend' },
+  { name: 'Electron.js',   percentage: 75, category: 'frontend' },
+  { name: 'Next.js',       percentage: 75, category: 'frontend' },
 ]
 
 export const SKILL_CATEGORIES = {
   backend:  ['Django', 'Django REST Framework', 'REST APIs', 'Python'],
-  frontend: ['React.js', 'Tailwind CSS', 'HTML / CSS'],
+  frontend: ['React.js', 'Tailwind CSS', 'HTML / CSS', 'Next.js'],
   database: ['PostgreSQL', 'SQLite'],
   devops:   ['Docker', 'Git', 'GitHub', 'Linux'],
-  tools:    ['VS Code', 'Postman'],
+  tools:    ['VS Code', 'Postman', 'Electron.js'],
 }
 
 // ── Projects ─────────────────────────────────
@@ -112,6 +114,28 @@ Private groups are protected by a password, giving creators full control over wh
       '/screenshots/letmelearn/create.png',
       '/screenshots/letmelearn/login.png',
       '/screenshots/letmelearn/register.png',
+    ],
+  },
+  {
+    id: 4,
+    title: 'Threadly',
+    tagline: 'Shop the latest fashion trends. Works online and offline.',
+    shortDesc: 'A modern full-stack clothing store with web and desktop apps. Browse products, manage your cart, leave reviews, and admin tools — all with offline support.',
+    fullDesc: `Threadly is a full-stack clothing e-commerce platform built with Next.js and Electron. Customers can browse products with filters, add to cart, checkout with Cash on Delivery, track orders, save wishlists, and leave reviews. The admin panel manages products, orders, and users. The Electron desktop app wraps the web store for offline browsing with auto-sync when back online. Mobile-responsive design throughout.`,
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Electron', 'IndexedDB', 'Service Worker'],
+    github: 'https://github.com/fadi4programing-lab/Threadly.git',
+    live: 'https://threadly-mocha.vercel.app',
+    thumbnail: '/screenshots/threadly/1.png',
+    images: [
+      '/screenshots/threadly/1.png',
+      '/screenshots/threadly/2.png',
+      '/screenshots/threadly/3.png',
+      '/screenshots/threadly/4.png',
+      '/screenshots/threadly/5.png',
+      '/screenshots/threadly/6.png',
+      '/screenshots/threadly/7.png',
+      '/screenshots/threadly/8.png',
+      '/screenshots/threadly/9.png',
     ],
   },
 ]
