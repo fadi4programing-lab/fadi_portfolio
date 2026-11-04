@@ -138,4 +138,29 @@ Private groups are protected by a password, giving creators full control over wh
       '/screenshots/threadly/9.png',
     ],
   },
+  {
+    id: 5,
+    title: 'Smart ERP',
+    tagline: 'Financial Control, Powered by AI',
+    shortDesc: 'A full-stack ERP and finance platform with role-based workflows, payroll ledgers, encrypted AI anomaly detection, and adaptive model retraining.',
+    fullDesc: `Smart ERP & Finance Engine is a full-stack finance and workforce platform I built to bring financial control, payroll, HR analytics, and AI-assisted risk detection into one workspace.
+
+The backend is built with Django REST Framework and JWT authentication, with role-based access for administrators and employees. It includes a financial ledger for income and expenses, department spending policies, payroll and bonus transactions linked to employee compensation records, monthly cash-flow reporting, and CSV export. Employees can submit expenses and track only their own activity, while administrators manage reviews, payroll, and HR data.
+
+The AI layer uses an Isolation Forest model to score every transaction and surface anomalies for review. Model artifacts are encrypted at rest, and the platform silently retrains on approved client transactions at 50, 100, and 250 records without exposing model internals. On a stratified 70/30 evaluation, the baseline reached 98.53% accuracy, 0.9983 ROC-AUC, and 0.8136 anomaly F1. The dashboard is built with Next.js, React, TypeScript, and Tailwind CSS.`,
+    tech: ['Django', 'Django REST Framework', 'Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'scikit-learn', 'SQLite', 'JWT'],
+    github: 'https://github.com/fadi4programing-lab/Smart-ERP-Finance-Engine.git',
+    live: null,
+    thumbnail: '/screenshots/smart-erp/dashboard.png',
+    images: [
+      '/screenshots/smart-erp/dashboard.png',
+      '/screenshots/smart-erp/finance.png',
+      '/screenshots/smart-erp/hr.png',
+      '/screenshots/smart-erp/new-transaction.png',
+      '/screenshots/smart-erp/submit.png',
+      '/screenshots/smart-erp/settings.png',
+      '/screenshots/smart-erp/login.png',
+      '/screenshots/smart-erp/register.png',
+    ],
+  },
 ]
